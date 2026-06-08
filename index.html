@@ -1,88 +1,257 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KATA | Plan the party. Track the tab.</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
-</head>
-<body>
-  <main class="page">
-    <nav>
-      <div class="brand">
-        <img src="logo.png" alt="KATA Logo" />
-        <span>KATA</span>
-      </div>
-      <a href="#download" class="nav-btn">Get the app</a>
-    </nav>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <section class="hero">
-      <div class="hero-text">
-        <p class="eyebrow">Keep All Tabs Accountable</p>
-        <h1>Plan the party.<br />Track the tab.</h1>
-        <p class="sub">
-          No awkward math. No lost receipts.<br />
-          Just good times, handled.
-        </p>
-        <section class="hero">
-  <h1>Plan the party. Track the tab.</h1>
+  <title>KATA | Plan the party. Track the tab.</title>
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fff8ef;
+      color: #151515;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+        sans-serif;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    .logo {
+      width: 120px;
+      border-radius: 24px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 64px;
+      line-height: 1;
+      font-weight: 900;
+      margin-bottom: 24px;
+    }
+
+    .subtitle {
+      font-size: 26px;
+      line-height: 1.4;
+      color: #555;
+      max-width: 650px;
+      margin-bottom: 40px;
+    }
+
+    .waitlist {
+      display: flex;
+      gap: 12px;
+      max-width: 550px;
+      margin-bottom: 40px;
+    }
+
+    .waitlist input {
+      flex: 1;
+      padding: 18px;
+      border-radius: 16px;
+      border: 2px solid #111;
+      font-size: 16px;
+      background: white;
+    }
+
+    .waitlist button {
+      padding: 18px 24px;
+      border: none;
+      border-radius: 16px;
+      background: #ff5a1f;
+      color: white;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .waitlist button:hover {
+      opacity: .9;
+    }
+
+    .download-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    .download-btn {
+      padding: 18px 24px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .primary {
+      background: #ff5a1f;
+      color: white;
+    }
+
+    .secondary {
+      background: #111;
+      color: white;
+    }
+
+    .section {
+      margin-top: 80px;
+    }
+
+    .section h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #555;
+      max-width: 750px;
+    }
+
+    footer {
+      margin-top: 100px;
+      padding-top: 40px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ff5a1f;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+
+      h1 {
+        font-size: 44px;
+      }
+
+      .subtitle {
+        font-size: 20px;
+      }
+
+      .waitlist {
+        flex-direction: column;
+      }
+
+      .waitlist button {
+        width: 100%;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+```
+<img src="favicon.png" alt="KATA Logo" class="logo">
+
+<h1>
+  Plan the party.<br>
+  Track the tab.
+</h1>
+
+<p class="subtitle">
+  No awkward math. No lost receipts.
+  Just good times, handled.
+</p>
+
+<form
+  class="waitlist"
+  action="https://formspree.io/f/mrevqnkv"
+  method="POST">
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Enter your email"
+    required>
+
+  <button type="submit">
+    Get Early Access
+  </button>
+
+</form>
+
+<div class="download-buttons">
+
+  <a href="#" class="download-btn primary">
+    App Store Coming Soon
+  </a>
+
+  <a href="#" class="download-btn secondary">
+    Google Play Coming Soon
+  </a>
+
+</div>
+
+<section class="section">
+
+  <h2>
+    Keep All Tabs Accountable.
+  </h2>
 
   <p>
-    No awkward math. No lost receipts.
-    Just good times, handled.
+    KATA helps groups plan events, track stops, split receipts,
+    assign expenses, and settle up without the awkwardness.
+    Whether it's dinner, drinks, golf, travel, birthdays,
+    Airbnb trips, or a weekend with friends,
+    everyone stays on the same page.
   </p>
-
-  <form class="waitlist" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <input
-      type="email"
-      name="email"
-      placeholder="Enter your email"
-      required
-    />
-    <button type="submit">
-      Join The Waitlist
-    </button>
-  </form>
 
 </section>
 
-        <div class="buttons" id="download">
-          <a href="#" class="btn primary">Download on App Store</a>
-          <a href="#" class="btn secondary">Get it on Google Play</a>
-        </div>
+<section class="section">
 
-        <p class="beta">Beta testing soon.</p>
-      </div>
+  <h2>
+    One App. Every Tab.
+  </h2>
 
-      <div class="hero-card">
-        <img src="logo.png" alt="KATA App Logo" />
-        <h2>KATA</h2>
-        <p>Events, tabs, receipts, and memories — all in one place.</p>
-      </div>
-    </section>
+  <p>
+    Create events. Invite friends.
+    Upload receipts. Track who paid.
+    Send reminders. Close tabs.
+    Share recaps.
+  </p>
 
-    <section class="features">
-      <div>
-        <h3>Plan Events</h3>
-        <p>Create birthdays, dinners, golf days, trips, and group hangouts.</p>
-      </div>
-      <div>
-        <h3>Split Tabs</h3>
-        <p>Add receipts, claim items, split big purchases, and settle up.</p>
-      </div>
-      <div>
-        <h3>Keep It Friendly</h3>
-        <p>No awkward group chat math. Everyone knows their part.</p>
-      </div>
-    </section>
-  </main>
-</body>
-</html>
-<footer class="footer">
-  <p>Follow KATA on X</p>
-  <a href="https://x.com/joinkatadotcom" target="_blank" rel="noopener">
+</section>
+
+<footer>
+
+  <p>
+    Follow KATA on X
+  </p>
+
+  <br>
+
+  <a
+    href="https://x.com/joinkatadotcom"
+    target="_blank">
     @joinkatadotcom
   </a>
+
 </footer>
+```
+
+  </div>
+
+</body>
+</html>
