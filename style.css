@@ -181,3 +181,26 @@ h1 {
   text-decoration: none;
   font-weight: 900;
 }
+.waitlist {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  max-width: 500px;
+}
+
+.waitlist input {
+  flex: 1;
+  padding: 16px;
+  border-radius: 14px;
+  border: 2px solid #111;
+}
+
+.waitlist button {
+  background: #f4511e;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 16px 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
