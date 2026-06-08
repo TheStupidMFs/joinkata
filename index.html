@@ -2,167 +2,190 @@
 
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>KATA | Plan the party. Track the tab.</title>
+  <title>KATA | Plan the party. Track the tab.</title>
+  <link rel="stylesheet" href="style.css" />
 
-<link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
 
-<style>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+    body {
+      background: #fff8ef;
+      color: #151515;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+        sans-serif;
+      min-height: 100vh;
+    }
 
-body{
-  background:#FFF8EF;
-  color:#111;
-  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
-}
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
 
-.container{
-  max-width:1100px;
-  margin:0 auto;
-  padding:60px 24px;
-}
+    .logo {
+      width: 120px;
+      border-radius: 24px;
+      margin-bottom: 30px;
+    }
 
-.logo{
-  width:120px;
-  border-radius:24px;
-  margin-bottom:40px;
-}
+    h1 {
+      font-size: 64px;
+      line-height: 1;
+      font-weight: 900;
+      margin-bottom: 24px;
+    }
 
-.hero{
-  min-height:70vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
+    .subtitle {
+      font-size: 26px;
+      line-height: 1.4;
+      color: #555;
+      max-width: 650px;
+      margin-bottom: 40px;
+    }
 
-h1{
-  font-size:72px;
-  line-height:0.95;
-  font-weight:900;
-  margin-bottom:24px;
-  max-width:800px;
-}
+    .waitlist {
+      display: flex;
+      gap: 12px;
+      max-width: 550px;
+      margin-bottom: 40px;
+    }
 
-.subtitle{
-  font-size:24px;
-  line-height:1.6;
-  color:#555;
-  max-width:650px;
-  margin-bottom:40px;
-}
+    .waitlist input {
+      flex: 1;
+      padding: 18px;
+      border-radius: 16px;
+      border: 2px solid #111;
+      font-size: 16px;
+      background: white;
+    }
 
-.waitlist{
-  display:flex;
-  gap:14px;
-  max-width:620px;
-  margin-bottom:16px;
-}
+    .waitlist button {
+      padding: 18px 24px;
+      border: none;
+      border-radius: 16px;
+      background: #ff5a1f;
+      color: white;
+      font-weight: 800;
+      cursor: pointer;
+    }
 
-.waitlist input{
-  flex:1;
-  height:64px;
-  border-radius:18px;
-  border:2px solid #111;
-  padding:0 20px;
-  font-size:18px;
-  background:white;
-}
+    .waitlist button:hover {
+      opacity: .9;
+    }
 
-.waitlist button{
-  height:64px;
-  padding:0 28px;
-  border:none;
-  border-radius:18px;
-  background:#FF5A1F;
-  color:white;
-  font-size:17px;
-  font-weight:800;
-  cursor:pointer;
-}
+    .download-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
 
-.waitlist button:hover{
-  opacity:.9;
-}
+    .download-btn {
+      padding: 18px 24px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-weight: 800;
+    }
 
-.beta{
-  color:#666;
-  font-size:16px;
-  margin-bottom:80px;
-}
+    .primary {
+      background: #ff5a1f;
+      color: white;
+    }
 
-.section{
-  margin-top:90px;
-}
+    .secondary {
+      background: #111;
+      color: white;
+    }
 
-.section h2{
-  font-size:42px;
-  margin-bottom:20px;
-}
+    .section {
+      margin-top: 80px;
+    }
 
-.section p{
-  max-width:750px;
-  font-size:20px;
-  line-height:1.8;
-  color:#555;
-}
+    .section h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
 
-.footer{
-  text-align:center;
-  margin-top:100px;
-  padding-top:40px;
-  border-top:1px solid #ddd;
-}
+    .section p {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #555;
+      max-width: 750px;
+    }
 
-.footer p{
-  margin-bottom:12px;
-}
+    footer {
+      margin-top: 100px;
+      padding-top: 40px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+    }
 
-.footer a{
-  color:#FF5A1F;
-  text-decoration:none;
-  font-weight:800;
-}
+    footer a {
+      color: #ff5a1f;
+      font-weight: 800;
+      text-decoration: none;
+    }
 
-@media(max-width:768px){
+    @media (max-width: 768px) {
 
-  h1{
-    font-size:48px;
-  }
+      h1 {
+        font-size: 44px;
+      }
 
-  .subtitle{
-    font-size:20px;
-  }
+      .subtitle {
+        font-size: 20px;
+      }
 
-  .waitlist{
-    flex-direction:column;
-  }
+      .waitlist {
+        flex-direction: column;
+      }
 
-  .waitlist button{
-    width:100%;
-  }
-
-}
-
-</style>
+      .waitlist button {
+        width: 100%;
+      }
+    }
+  </style>
 
 </head>
 
 <body>
+  <main class="page">
+    <nav>
+      <div class="brand">
+        <img src="logo.png" alt="KATA Logo" />
+        <span>KATA</span>
+      </div>
+      <a href="#download" class="nav-btn">Get the app</a>
+    </nav>
 
-<div class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Keep All Tabs Accountable</p>
+        <h1>Plan the party.<br />Track the tab.</h1>
+        <p class="sub">
+          No awkward math. No lost receipts.<br />
+          Just good times, handled.
+        </p>
+        <section class="hero">
+  <h1>Plan the party. Track the tab.</h1>
 
-  <section class="hero">
+  <div class="container">
 
 ```
-<img src="favicon.png" class="logo" alt="KATA Logo">
+<img src="favicon.png" alt="KATA Logo" class="logo">
 
 <h1>
   Plan the party.<br>
@@ -191,61 +214,115 @@ h1{
 
 </form>
 
-<p class="beta">
-  Beta testing begins soon.
-</p>
-```
+<div class="download-buttons">
 
-  </section>
+  <a href="#" class="download-btn primary">
+    App Store Coming Soon
+  </a>
 
-  <section class="section">
-
-```
-<h2>
-  Keep All Tabs Accountable.
-</h2>
-
-<p>
-  KATA helps groups organize events, track stops, split receipts,
-  assign expenses, and settle up without awkward conversations.
-  Whether it's dinner, drinks, golf, birthdays, travel, Airbnb trips,
-  or weekend adventures, everyone stays on the same page.
-</p>
-```
-
-  </section>
-
-  <section class="section">
-
-```
-<h2>
-  Built For Real Life.
-</h2>
-
-<p>
-  Create an event. Invite your crew. Upload receipts. Track who paid.
-  Send reminders. Close tabs. Share recaps. KATA keeps the night moving
-  without forcing someone to become the group accountant.
-</p>
-```
-
-  </section>
-
-  <footer class="footer">
-
-```
-<p>Follow KATA on X</p>
-
-<a
-  href="https://x.com/joinkatadotcom"
-  target="_blank">
-  @joinkatadotcom
-</a>
-```
-
-  </footer>
+  <a href="#" class="download-btn secondary">
+    Google Play Coming Soon
+  </a>
 
 </div>
+
+<section class="section">
+
+  <h2>
+    Keep All Tabs Accountable.
+  </h2>
+
+  <p>
+    No awkward math. No lost receipts.
+    Just good times, handled.
+    KATA helps groups plan events, track stops, split receipts,
+    assign expenses, and settle up without the awkwardness.
+    Whether it's dinner, drinks, golf, travel, birthdays,
+    Airbnb trips, or a weekend with friends,
+    everyone stays on the same page.
+  </p>
+
+  <form class="waitlist" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input
+      type="email"
+      name="email"
+      placeholder="Enter your email"
+      required
+    />
+    <button type="submit">
+      Join The Waitlist
+    </button>
+  </form>
+</section>
+
+<section class="section">
+
+  <h2>
+    One App. Every Tab.
+  </h2>
+
+  <p>
+    Create events. Invite friends.
+    Upload receipts. Track who paid.
+    Send reminders. Close tabs.
+    Share recaps.
+  </p>
+
+</section>
+
+        <div class="buttons" id="download">
+          <a href="#" class="btn primary">Download on App Store</a>
+          <a href="#" class="btn secondary">Get it on Google Play</a>
+        </div>
+
+        <p class="beta">Beta testing soon.</p>
+      </div>
+
+      <div class="hero-card">
+        <img src="logo.png" alt="KATA App Logo" />
+        <h2>KATA</h2>
+        <p>Events, tabs, receipts, and memories — all in one place.</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div>
+        <h3>Plan Events</h3>
+        <p>Create birthdays, dinners, golf days, trips, and group hangouts.</p>
+      </div>
+      <div>
+        <h3>Split Tabs</h3>
+        <p>Add receipts, claim items, split big purchases, and settle up.</p>
+      </div>
+      <div>
+        <h3>Keep It Friendly</h3>
+        <p>No awkward group chat math. Everyone knows their part.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+<footer class="footer">
+  <p>Follow KATA on X</p>
+  <a href="https://x.com/joinkatadotcom" target="_blank" rel="noopener">
+<footer>
+
+  <p>
+    Follow KATA on X
+  </p>
+
+  <br>
+
+  <a
+    href="https://x.com/joinkatadotcom"
+    target="_blank">
+    @joinkatadotcom
+  </a>
+
+</footer>
+```
+
+  </div>
 
 </body>
 </html>
