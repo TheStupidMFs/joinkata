@@ -168,3 +168,16 @@ h1 {
     font-size: 21px;
   }
 }
+.footer {
+  max-width: 1100px;
+  margin: 70px auto 0;
+  text-align: center;
+  color: #5b4c42;
+  font-weight: 700;
+}
+
+.footer a {
+  color: #f4511e;
+  text-decoration: none;
+  font-weight: 900;
+}
