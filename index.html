@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,118 +6,1146 @@
 
   <title>KATA | Plan the party. Track the tab.</title>
 
-  <link rel="icon" type="image/png" href="KATAMAINLOGO.png">
-  <link rel="apple-touch-icon" href="KATAMAINLOGO.png">
+  <meta
+    name="description"
+    content="KATA keeps group plans, stops, receipts, shared expenses, and settlement together in one place."
+  />
+
+  <meta property="og:title" content="KATA | Plan the party. Track the tab." />
+  <meta
+    property="og:description"
+    content="No awkward math. No lost receipts. Just good times, handled."
+  />
+  <meta property="og:image" content="KATAMAINLOGO.png" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="KATA | Plan the party. Track the tab." />
+  <meta
+    name="twitter:description"
+    content="Plan events, track shared expenses, and keep the whole group on the same page."
+  />
+  <meta name="twitter:image" content="KATAMAINLOGO.png" />
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="KATAMAINLOGO.png" />
 
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-  <main class="page">
 
-```
-<nav>
-  <div class="brand">
-    <img src="KATAMAINLOGO.png" alt="KATA Logo" />
-    <span>KATA</span>
-  </div>
-
-  <a
-    href="https://x.com/joinkatadotcom"
-    class="nav-btn"
-    target="_blank"
-    rel="noopener">
-    Follow on X
+  <a class="skip-link" href="#main-content">
+    Skip to content
   </a>
-</nav>
 
-<section class="hero">
+  <header class="site-header">
 
-  <div class="hero-text">
+    <nav class="nav-shell" aria-label="Primary navigation">
 
-    <p class="eyebrow">
-      Keep All Tabs Accountable
-    </p>
+      <a class="brand" href="#top" aria-label="KATA home">
+        <img src="KATAMAINLOGO.png" alt="" />
+        <span>KATA</span>
+      </a>
 
-    <h1>
-      Plan the party.<br>
-      Track the tab.
-    </h1>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-menu"
+        aria-label="Open navigation menu">
 
-    <p class="sub">
-      No awkward math. No lost receipts.<br>
-      Just good times, handled.
-    </p>
+        <span></span>
+        <span></span>
 
-    <form
-      class="waitlist"
-      action="https://formspree.io/f/mrevqnkv"
-      method="POST">
-
-      <input
-        type="email"
-        name="email"
-        placeholder="Enter your email"
-        required />
-
-      <button type="submit">
-        Join The Waitlist
       </button>
 
-    </form>
+      <div class="site-menu" id="site-menu">
 
-    <p class="CA">
-      App testing & CA coming soon...
-    </p>
+        <div class="nav-links">
+          <a href="#product">Product</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#community">Community</a>
+          <a href="#faq">FAQ</a>
+        </div>
 
-  </div>
+        <div class="nav-actions">
 
-  <div class="hero-card">
-    <img src="KATAMAINLOGO.png" alt="KATA App Logo" />
-    <h2>KATA</h2>
-    <p>
-      Events, tabs, receipts, and memories — all in one place.
-    </p>
-  </div>
+          <!-- Replace this with your official Telegram invite link. -->
+          <a
+            class="button button-ghost telegram-link"
+            href="https://t.me/"
+            target="_blank"
+            rel="noopener">
+            Join Telegram
+          </a>
 
-</section>
+          <a class="button button-dark" href="#waitlist">
+            Join Waitlist
+          </a>
 
-<section class="features">
+        </div>
 
-  <div>
-    <h3>Plan Events</h3>
-    <p>
-      Create birthdays, dinners, golf days, trips, and group hangouts.
-    </p>
-  </div>
+      </div>
 
-  <div>
-    <h3>Split Tabs</h3>
-    <p>
-      Add receipts, claim items, split big purchases, and settle up.
-    </p>
-  </div>
+    </nav>
 
-  <div>
-    <h3>Keep It Friendly</h3>
-    <p>
-      No awkward group chat math. Everyone knows their part.
-    </p>
-  </div>
+  </header>
 
-</section>
+  <main id="main-content">
 
-<footer class="footer">
-  <p>Follow KATA on X</p>
-  <a
-    href="https://x.com/joinkatadotcom"
-    target="_blank"
-    rel="noopener">
-    @joinkatadotcom
-  </a>
-</footer>
-```
+    <section class="hero section" id="top">
+
+      <div class="hero-copy">
+
+        <p class="eyebrow">
+          Keep All Tabs Accountable
+        </p>
+
+        <h1>
+          Plan the party.<br />
+          Track the tab.
+        </h1>
+
+        <p class="hero-subtitle">
+          No awkward math. No lost receipts.<br />
+          Just good times, handled.
+        </p>
+
+        <p class="hero-description">
+          Build the plan, invite the group, organize every stop, track shared
+          expenses, and close the tab without slowing down the experience.
+        </p>
+
+        <form
+          class="waitlist"
+          id="waitlist"
+          action="https://formspree.io/f/mrevqnkv"
+          method="POST">
+
+          <label class="sr-only" for="hero-email">
+            Email address
+          </label>
+
+          <input
+            id="hero-email"
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            required
+          />
+
+          <input
+            type="hidden"
+            name="source"
+            value="KATA homepage hero"
+          />
+
+          <button type="submit">
+            Join The Waitlist
+          </button>
+
+        </form>
+
+        <div class="hero-links">
+
+          <p class="beta">
+            Private testing begins soon.
+          </p>
+
+          <a
+            href="https://x.com/joinkatadotcom"
+            target="_blank"
+            rel="noopener">
+            Follow @joinkatadotcom
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-visual" aria-label="KATA product preview">
+
+        <div class="hero-card">
+
+          <div class="card-topline">
+            <span>Your Group Experience</span>
+            <span class="live-dot">In Development</span>
+          </div>
+
+          <img
+            src="KATAMAINLOGO.png"
+            alt="KATA app logo"
+          />
+
+          <h2>KATA</h2>
+
+          <p>
+            Events, tabs, receipts, and memories — all in one place.
+          </p>
+
+          <div class="mini-event-card">
+
+            <div>
+              <span class="mini-label">Saturday Plan</span>
+              <strong>Beach Day + Dinner</strong>
+            </div>
+
+            <span class="member-count">
+              6 people
+            </span>
+
+          </div>
+
+          <div class="mini-progress" aria-hidden="true">
+            <span class="complete"></span>
+            <span class="complete"></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+
+        <div class="floating-card floating-card-left">
+
+          <span class="floating-icon">
+            01
+          </span>
+
+          <div>
+            <small>Current stop</small>
+            <strong>Beach Run</strong>
+          </div>
+
+        </div>
+
+        <div class="floating-card floating-card-right">
+
+          <span class="floating-icon">
+            $
+          </span>
+
+          <div>
+            <small>Group tab</small>
+            <strong>Clear balances</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section
+      class="status-strip"
+      aria-label="KATA development status">
+
+      <div>Private Beta in Development</div>
+      <div>Group Event Planning</div>
+      <div>Receipt & Tab Tracking</div>
+      <div>USDC Settlement Vision</div>
+
+    </section>
+
+    <section class="section intro-section" id="product">
+
+      <div class="section-heading split-heading">
+
+        <div>
+
+          <p class="eyebrow">
+            The problem
+          </p>
+
+          <h2>
+            Group plans are fun. Organizing them usually isn’t.
+          </h2>
+
+        </div>
+
+        <p>
+          Plans get buried in chats. Stops change. Receipts disappear.
+          Nobody remembers who paid. KATA keeps the entire experience
+          together.
+        </p>
+
+      </div>
+
+      <div class="feature-grid">
+
+        <article class="feature-card">
+
+          <span>01</span>
+
+          <h3>
+            Plan the Experience
+          </h3>
+
+          <p>
+            Create the event, invite the group, and organize every stop.
+          </p>
+
+        </article>
+
+        <article class="feature-card">
+
+          <span>02</span>
+
+          <h3>
+            Track Every Tab
+          </h3>
+
+          <p>
+            Upload receipts, claim purchases, and know who owes what.
+          </p>
+
+        </article>
+
+        <article class="feature-card">
+
+          <span>03</span>
+
+          <h3>
+            Keep Everyone Updated
+          </h3>
+
+          <p>
+            Plans, activity, balances, and changes stay in one place.
+          </p>
+
+        </article>
+
+        <article class="feature-card feature-card-dark">
+
+          <span>04</span>
+
+          <h3>
+            Settle Without Stress
+          </h3>
+
+          <p>
+            Close the event with clear balances and supported payment options.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="section how-section" id="how-it-works">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          How KATA works
+        </p>
+
+        <h2>
+          From “what’s the plan?” to “we’re all settled.”
+        </h2>
+
+      </div>
+
+      <div class="steps">
+
+        <article class="step active" data-step="create">
+
+          <button
+            type="button"
+            class="step-button"
+            aria-expanded="true">
+
+            <span>01</span>
+
+            <div>
+              <h3>Create</h3>
+
+              <p>
+                Start a dinner, trip, birthday, workout, or group outing.
+              </p>
+            </div>
+
+          </button>
+
+        </article>
+
+        <article class="step" data-step="invite">
+
+          <button
+            type="button"
+            class="step-button"
+            aria-expanded="false">
+
+            <span>02</span>
+
+            <div>
+              <h3>Invite</h3>
+
+              <p>
+                Bring your people in and keep the plan in one shared place.
+              </p>
+            </div>
+
+          </button>
+
+        </article>
+
+        <article class="step" data-step="track">
+
+          <button
+            type="button"
+            class="step-button"
+            aria-expanded="false">
+
+            <span>03</span>
+
+            <div>
+              <h3>Track</h3>
+
+              <p>
+                Add stops, receipts, purchases, updates, and group activity.
+              </p>
+            </div>
+
+          </button>
+
+        </article>
+
+        <article class="step" data-step="settle">
+
+          <button
+            type="button"
+            class="step-button"
+            aria-expanded="false">
+
+            <span>04</span>
+
+            <div>
+              <h3>Settle</h3>
+
+              <p>
+                See every balance clearly and close the event without awkward
+                math.
+              </p>
+            </div>
+
+          </button>
+
+        </article>
+
+      </div>
+
+      <div class="product-demo">
+
+        <div class="demo-copy">
+
+          <span class="demo-number" id="demo-number">
+            01
+          </span>
+
+          <p class="eyebrow" id="demo-eyebrow">
+            Create the event
+          </p>
+
+          <h3 id="demo-title">
+            Give the group one clear plan.
+          </h3>
+
+          <p id="demo-description">
+            Add the name, date, people, and first stops so everybody knows what
+            is happening before the day begins.
+          </p>
+
+        </div>
+
+        <div class="phone-shell">
+
+          <div class="phone-speaker"></div>
+
+          <div class="phone-screen">
+
+            <div class="app-preview" id="app-preview">
+
+              <div class="app-preview-header">
+
+                <img
+                  src="KATAMAINLOGO.png"
+                  alt=""
+                />
+
+                <div>
+                  <small>KATA Event</small>
+
+                  <strong id="preview-event">
+                    Beach Day + Dinner
+                  </strong>
+                </div>
+
+              </div>
+
+              <div class="preview-banner">
+
+                <small id="preview-label">
+                  Next Step
+                </small>
+
+                <strong id="preview-main">
+                  Create your group experience
+                </strong>
+
+              </div>
+
+              <div class="preview-list" id="preview-list">
+
+                <div>
+                  <span>1</span>
+                  <p>Choose the event</p>
+                  <b>Ready</b>
+                </div>
+
+                <div>
+                  <span>2</span>
+                  <p>Add the date</p>
+                  <b>Ready</b>
+                </div>
+
+                <div>
+                  <span>3</span>
+                  <p>Invite the group</p>
+                  <b>Next</b>
+                </div>
+
+              </div>
+
+              <button
+                type="button"
+                tabindex="-1"
+                id="preview-button">
+                Continue
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section use-cases-section">
+
+      <div class="section-heading split-heading">
+
+        <div>
+
+          <p class="eyebrow">
+            Every kind of plan
+          </p>
+
+          <h2>
+            Built for more than dinner.
+          </h2>
+
+        </div>
+
+        <p>
+          KATA is made for the whole experience — from the first invite to the
+          final balance.
+        </p>
+
+      </div>
+
+      <div class="use-case-grid">
+
+        <article>
+          <span>🎂</span>
+          <h3>Birthdays</h3>
+        </article>
+
+        <article>
+          <span>🍽️</span>
+          <h3>Group Dinners</h3>
+        </article>
+
+        <article>
+          <span>🌊</span>
+          <h3>Beach Days</h3>
+        </article>
+
+        <article>
+          <span>🚗</span>
+          <h3>Road Trips</h3>
+        </article>
+
+        <article>
+          <span>✈️</span>
+          <h3>Vacations</h3>
+        </article>
+
+        <article>
+          <span>⛳</span>
+          <h3>Golf Outings</h3>
+        </article>
+
+        <article>
+          <span>🎟️</span>
+          <h3>Concert Nights</h3>
+        </article>
+
+        <article>
+          <span>💼</span>
+          <h3>Business Travel</h3>
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="settlement-section">
+
+      <div class="settlement-inner">
+
+        <div class="settlement-copy">
+
+          <p class="eyebrow eyebrow-light">
+            Modern settlement
+          </p>
+
+          <h2>
+            Settle together. Anywhere.
+          </h2>
+
+          <p>
+            KATA is being built for modern groups: friends traveling together,
+            remote teams meeting in person, and communities creating
+            experiences across borders.
+          </p>
+
+          <p>
+            USDC settlement on Solana can help groups close shared tabs quickly
+            without turning KATA into a complicated crypto product.
+          </p>
+
+          <div class="settlement-points">
+            <span>Clear group balances</span>
+            <span>Fast settlement vision</span>
+            <span>Built for global experiences</span>
+          </div>
+
+        </div>
+
+        <div class="settlement-card">
+
+          <div class="settlement-card-head">
+            <span>Event Balance</span>
+            <span>USDC</span>
+          </div>
+
+          <strong>
+            $184.50
+          </strong>
+
+          <p>
+            Ready to settle across the group
+          </p>
+
+          <div class="balance-row">
+            <span>Food & drinks</span>
+            <b>$126.00</b>
+          </div>
+
+          <div class="balance-row">
+            <span>Gas</span>
+            <b>$38.50</b>
+          </div>
+
+          <div class="balance-row">
+            <span>Parking</span>
+            <b>$20.00</b>
+          </div>
+
+          <button type="button" tabindex="-1">
+            Settle Group Tab
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section roadmap-section" id="roadmap">
+
+      <div class="section-heading split-heading">
+
+        <div>
+
+          <p class="eyebrow">
+            Roadmap
+          </p>
+
+          <h2>
+            Building KATA one real experience at a time.
+          </h2>
+
+        </div>
+
+        <p>
+          The focus is a useful product, a strong early community, and a
+          repeatable experience people want to bring into real life.
+        </p>
+
+      </div>
+
+      <div class="roadmap-grid">
+
+        <article class="roadmap-card">
+
+          <div class="roadmap-card-top">
+            <span class="status completed">Completed</span>
+            <span>Phase 01</span>
+          </div>
+
+          <h3>
+            Foundation
+          </h3>
+
+          <ul>
+            <li>Brand and product direction</li>
+            <li>Event creation</li>
+            <li>Group invitations</li>
+            <li>Stops and itineraries</li>
+            <li>Shared tabs and receipts</li>
+          </ul>
+
+        </article>
+
+        <article class="roadmap-card roadmap-card-current">
+
+          <div class="roadmap-card-top">
+            <span class="status progress">In Progress</span>
+            <span>Phase 02</span>
+          </div>
+
+          <h3>
+            Private Testing
+          </h3>
+
+          <ul>
+            <li>Closed beta users</li>
+            <li>Real event testing</li>
+            <li>Interface refinement</li>
+            <li>Group feedback</li>
+            <li>Settlement testing</li>
+          </ul>
+
+        </article>
+
+        <article class="roadmap-card">
+
+          <div class="roadmap-card-top">
+            <span class="status next">Up Next</span>
+            <span>Phase 03</span>
+          </div>
+
+          <h3>
+            Public Beta
+          </h3>
+
+          <ul>
+            <li>Expanded waitlist access</li>
+            <li>Mobile testing</li>
+            <li>Partner destinations</li>
+            <li>Community-led events</li>
+            <li>USDC settlement rollout</li>
+          </ul>
+
+        </article>
+
+        <article class="roadmap-card">
+
+          <div class="roadmap-card-top">
+            <span class="status future">Future</span>
+            <span>Phase 04</span>
+          </div>
+
+          <h3>
+            The KATA Network
+          </h3>
+
+          <ul>
+            <li>Sponsored experiences</li>
+            <li>Local business discovery</li>
+            <li>Group rewards</li>
+            <li>Travel tools</li>
+            <li>Creator and community events</li>
+          </ul>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="community-section" id="community">
+
+      <div class="community-inner">
+
+        <div>
+
+          <p class="eyebrow">
+            The early community
+          </p>
+
+          <h2>
+            Don’t just watch KATA grow. Help shape it.
+          </h2>
+
+          <p>
+            Join the early community, test new features, share feedback, and
+            help build a better way to experience life with your people.
+          </p>
+
+        </div>
+
+        <div class="community-actions">
+
+          <!-- Replace this with your official Telegram invite link. -->
+          <a
+            class="button button-orange telegram-link"
+            href="https://t.me/"
+            target="_blank"
+            rel="noopener">
+            Join Telegram
+          </a>
+
+          <a
+            class="button button-outline"
+            href="https://x.com/joinkatadotcom"
+            target="_blank"
+            rel="noopener">
+            Follow on X
+          </a>
+
+          <a class="text-link" href="#final-waitlist">
+            Get early access →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section faq-section" id="faq">
+
+      <div class="section-heading split-heading">
+
+        <div>
+
+          <p class="eyebrow">
+            FAQ
+          </p>
+
+          <h2>
+            What people should know about KATA.
+          </h2>
+
+        </div>
+
+        <p>
+          The product is still being built, but the mission is simple: keep the
+          plan and the tab accountable without killing the vibe.
+        </p>
+
+      </div>
+
+      <div class="faq-list">
+
+        <article class="faq-item">
+
+          <button type="button" aria-expanded="false">
+            <span>What is KATA?</span>
+            <span class="faq-icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+
+            <p>
+              KATA is a social planning and shared-expense app for group
+              experiences. It brings events, stops, receipts, balances, and
+              group activity into one place.
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="faq-item">
+
+          <button type="button" aria-expanded="false">
+            <span>What does KATA stand for?</span>
+            <span class="faq-icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+
+            <p>
+              Keep All Tabs Accountable.
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="faq-item">
+
+          <button type="button" aria-expanded="false">
+            <span>Is KATA only for splitting bills?</span>
+            <span class="faq-icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+
+            <p>
+              No. KATA combines event planning, invitations, stops, group
+              updates, receipts, shared expenses, and settlement.
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="faq-item">
+
+          <button type="button" aria-expanded="false">
+            <span>What types of events can I create?</span>
+            <span class="faq-icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+
+            <p>
+              Dinners, birthdays, vacations, workouts, road trips, nightlife,
+              golf outings, business travel, and almost any group experience.
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="faq-item">
+
+          <button type="button" aria-expanded="false">
+            <span>When will KATA be available?</span>
+            <span class="faq-icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+
+            <p>
+              KATA is currently in development and preparing for private
+              testing. Join the waitlist for early-access updates.
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="faq-item">
+
+          <button type="button" aria-expanded="false">
+            <span>Will I need crypto to use KATA?</span>
+            <span class="faq-icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+
+            <p>
+              The goal is for KATA to remain approachable for mainstream users.
+              USDC settlement is part of the product vision, not a requirement
+              for understanding or enjoying the core experience.
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="faq-item">
+
+          <button type="button" aria-expanded="false">
+            <span>Can businesses partner with KATA?</span>
+            <span class="faq-icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+
+            <p>
+              The partner program is being developed for restaurants,
+              activities, hotels, transportation, fitness studios, and other
+              destinations that improve group experiences.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="final-cta" id="final-waitlist">
+
+      <div class="final-cta-inner">
+
+        <div>
+
+          <p class="eyebrow eyebrow-dark">
+            Get there early
+          </p>
+
+          <h2>
+            The plan is better when everyone’s on the same page.
+          </h2>
+
+          <p>
+            Create the event. Bring the group. Let KATA handle the details.
+          </p>
+
+        </div>
+
+        <form
+          class="waitlist waitlist-dark"
+          action="https://formspree.io/f/mrevqnkv"
+          method="POST">
+
+          <label class="sr-only" for="footer-email">
+            Email address
+          </label>
+
+          <input
+            id="footer-email"
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            required
+          />
+
+          <input
+            type="hidden"
+            name="source"
+            value="KATA homepage final CTA"
+          />
+
+          <button type="submit">
+            Join The Waitlist
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
 
   </main>
+
+  <footer class="footer">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+
+        <a class="brand" href="#top">
+          <img src="KATAMAINLOGO.png" alt="" />
+          <span>KATA</span>
+        </a>
+
+        <p>
+          Keep All Tabs Accountable.
+        </p>
+
+      </div>
+
+      <div class="footer-column">
+
+        <strong>
+          Explore
+        </strong>
+
+        <a href="#product">Product</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#community">Community</a>
+        <a href="#faq">FAQ</a>
+
+      </div>
+
+      <div class="footer-column">
+
+        <strong>
+          Connect
+        </strong>
+
+        <a
+          href="https://x.com/joinkatadotcom"
+          target="_blank"
+          rel="noopener">
+          X / Twitter
+        </a>
+
+        <!-- Replace this with your official Telegram invite link. -->
+        <a
+          class="telegram-link"
+          href="https://t.me/"
+          target="_blank"
+          rel="noopener">
+          Telegram
+        </a>
+
+        <a href="#waitlist">
+          Early Access
+        </a>
+
+      </div>
+
+      <div class="footer-column">
+
+        <strong>
+          Legal
+        </strong>
+
+        <a href="privacy.html">
+          Privacy Policy
+        </a>
+
+        <a href="terms.html">
+          Terms of Service
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 KATA
+      </span>
+
+      <span>
+        No awkward math. No lost receipts.
+      </span>
+
+    </div>
+
+  </footer>
+
 </body>
 </html>
