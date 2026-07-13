@@ -194,7 +194,6 @@ stepButtons.forEach((button) => {
       }
     });
 
-    updateProductDemo(key);
   });
 });
 
