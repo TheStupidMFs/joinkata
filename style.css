@@ -3056,3 +3056,943 @@ p {
     font-size: clamp(42px, 13vw, 63px);
   }
 }
+/* =================================================
+   KATA REWARDS PAGE
+================================================= */
+
+/* ---------------------------------
+   REWARDS HERO
+---------------------------------- */
+
+.rewards-hero {
+  min-height: calc(100vh - 105px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(400px, 0.95fr);
+  gap: 76px;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+.rewards-hero-copy h1 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(64px, 8vw, 112px);
+  line-height: 0.88;
+  letter-spacing: -0.075em;
+}
+
+.rewards-hero-subtitle {
+  max-width: 650px;
+  margin: 34px 0 15px;
+  color: var(--brown);
+  font-size: clamp(22px, 2.1vw, 29px);
+  line-height: 1.25;
+}
+
+.rewards-hero-description {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.rewards-hero-actions {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.rewards-note {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 850;
+}
+
+/* ---------------------------------
+   REWARDS PROFILE CARD
+---------------------------------- */
+
+.rewards-profile-card {
+  position: relative;
+  min-height: 535px;
+  padding: 30px;
+  overflow: hidden;
+  border-radius: 44px;
+  background: var(--black);
+  color: var(--cream);
+  box-shadow: var(--orange-shadow);
+}
+
+.rewards-profile-card::after {
+  content: "";
+  position: absolute;
+  right: -150px;
+  bottom: -180px;
+  width: 390px;
+  height: 390px;
+  border-radius: 50%;
+  background: rgba(244, 81, 30, 0.17);
+  pointer-events: none;
+}
+
+.rewards-profile-top {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.rewards-profile-user {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.rewards-profile-user img {
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+}
+
+.rewards-profile-user div {
+  display: grid;
+  gap: 4px;
+}
+
+.rewards-profile-user small {
+  color: #a89687;
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+}
+
+.rewards-profile-user strong {
+  font-size: 16px;
+}
+
+.verified-host {
+  padding: 8px 11px;
+  border-radius: 999px;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 950;
+}
+
+.rewards-points-panel {
+  position: relative;
+  z-index: 2;
+  margin-top: 28px;
+  padding: 28px;
+  display: grid;
+  gap: 7px;
+  border: 1px solid var(--border-dark);
+  border-radius: 28px;
+  background: rgba(255, 243, 223, 0.06);
+}
+
+.rewards-points-panel span,
+.rewards-points-panel small {
+  color: #a89687;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.rewards-points-panel strong {
+  font-size: clamp(54px, 6vw, 78px);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.rewards-profile-stats {
+  position: relative;
+  z-index: 2;
+  margin-top: 13px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 11px;
+}
+
+.rewards-profile-stats div {
+  min-height: 105px;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-dark);
+  border-radius: 20px;
+  background: rgba(255, 243, 223, 0.05);
+}
+
+.rewards-profile-stats span {
+  color: #a89687;
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.rewards-profile-stats strong {
+  margin-top: auto;
+  font-size: 28px;
+  letter-spacing: -0.04em;
+}
+
+.rewards-host-score {
+  position: relative;
+  z-index: 2;
+  margin-top: 13px;
+  padding: 18px;
+  border: 1px solid var(--border-dark);
+  border-radius: 20px;
+  background: rgba(255, 243, 223, 0.05);
+}
+
+.rewards-host-score > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.rewards-host-score span {
+  color: #a89687;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.rewards-host-score strong {
+  font-size: 18px;
+}
+
+.host-score-bar {
+  height: 7px;
+  margin-top: 13px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 243, 223, 0.12);
+}
+
+.host-score-bar span {
+  width: 96%;
+  height: 100%;
+  display: block;
+  border-radius: 999px;
+  background: var(--orange);
+}
+
+/* ---------------------------------
+   REWARDS STATUS STRIP
+---------------------------------- */
+
+.rewards-status-strip {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--peach);
+}
+
+.rewards-status-strip div {
+  padding: 23px 18px;
+  border-right: 1px solid var(--border);
+  text-align: center;
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.rewards-status-strip div:last-child {
+  border-right: 0;
+}
+
+/* ---------------------------------
+   REWARDS FLOW
+---------------------------------- */
+
+.rewards-flow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.rewards-flow article {
+  min-height: 300px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: var(--cream-light);
+  transition:
+    transform 200ms ease,
+    background 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.rewards-flow article:hover {
+  background: var(--peach);
+  box-shadow: 0 20px 50px rgba(21, 17, 13, 0.08);
+  transform: translateY(-7px);
+}
+
+.rewards-flow article > span {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--peach);
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.rewards-flow h3 {
+  margin: auto 0 12px;
+  font-size: 24px;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.rewards-flow p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+.rewards-flow-arrow {
+  display: grid;
+  place-items: center;
+  color: var(--orange);
+  font-size: 28px;
+  font-weight: 950;
+}
+
+/* ---------------------------------
+   EARN REWARDS
+---------------------------------- */
+
+.rewards-earn-section {
+  position: relative;
+  overflow: hidden;
+  padding: 125px 28px;
+  background: var(--black);
+  color: var(--cream);
+}
+
+.rewards-earn-section::after {
+  content: "";
+  position: absolute;
+  right: -170px;
+  bottom: -240px;
+  width: 540px;
+  height: 540px;
+  border-radius: 50%;
+  background: rgba(244, 81, 30, 0.15);
+}
+
+.rewards-earn-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.rewards-earn-section .section-heading h2 {
+  color: var(--cream);
+}
+
+.rewards-earn-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+
+.rewards-earn-grid article {
+  min-height: 270px;
+  padding: 27px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-dark);
+  border-radius: 29px;
+  background: rgba(255, 243, 223, 0.06);
+  transition:
+    transform 200ms ease,
+    background 200ms ease;
+}
+
+.rewards-earn-grid article:hover {
+  background: rgba(255, 243, 223, 0.1);
+  transform: translateY(-7px);
+}
+
+.reward-icon {
+  font-size: 34px;
+}
+
+.rewards-earn-grid h3 {
+  margin: auto 0 11px;
+  font-size: 25px;
+  letter-spacing: -0.035em;
+}
+
+.rewards-earn-grid p {
+  margin: 0;
+  color: #d8c8b8;
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+/* ---------------------------------
+   REWARDS STORY PROFILE
+---------------------------------- */
+
+.rewards-story-card {
+  padding: 30px;
+  border-radius: 36px;
+  background: var(--black);
+  color: var(--cream);
+  box-shadow: var(--shadow);
+}
+
+.rewards-story-header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.rewards-story-header > div {
+  display: grid;
+  gap: 5px;
+}
+
+.rewards-story-header small {
+  color: #a89687;
+  font-size: 9px;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+}
+
+.rewards-story-header strong {
+  font-size: 24px;
+}
+
+.rewards-story-header > span {
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.rewards-story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.rewards-story-grid article {
+  min-height: 155px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-dark);
+  border-radius: 22px;
+  background: rgba(255, 243, 223, 0.06);
+}
+
+.rewards-story-grid span {
+  color: #a89687;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.rewards-story-grid strong {
+  margin: auto 0 4px;
+  font-size: 36px;
+  letter-spacing: -0.04em;
+}
+
+.rewards-story-grid small {
+  color: #c8b8aa;
+  font-size: 10px;
+}
+
+.rewards-story-highlight {
+  background: var(--orange) !important;
+}
+
+.rewards-story-highlight span,
+.rewards-story-highlight small {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ---------------------------------
+   REWARDS SEASONS
+---------------------------------- */
+
+.rewards-seasons-section {
+  padding: 125px 28px;
+  background: var(--black);
+  color: var(--cream);
+}
+
+.rewards-seasons-inner {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: center;
+  gap: 90px;
+}
+
+.rewards-seasons-copy h2 {
+  margin: 0;
+  font-size: clamp(46px, 5.8vw, 76px);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+}
+
+.rewards-seasons-copy > p:not(.eyebrow) {
+  color: #d8c8b8;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.rewards-season-card {
+  padding: 31px;
+  border: 1px solid var(--border-dark);
+  border-radius: 35px;
+  background: rgba(255, 243, 223, 0.07);
+}
+
+.rewards-season-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: #a89687;
+  font-size: 10px;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+}
+
+.season-status {
+  color: #ff956d;
+}
+
+.rewards-season-card h3 {
+  margin: 42px 0 13px;
+  font-size: 42px;
+  letter-spacing: -0.05em;
+}
+
+.rewards-season-card > p {
+  margin: 0;
+  color: #d8c8b8;
+  line-height: 1.65;
+}
+
+.season-progress {
+  margin-top: 30px;
+  padding: 18px;
+  border: 1px solid var(--border-dark);
+  border-radius: 21px;
+  background: rgba(255, 243, 223, 0.05);
+}
+
+.season-progress > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: #d8c8b8;
+  font-size: 12px;
+}
+
+.season-progress-bar {
+  height: 7px;
+  margin-top: 14px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 243, 223, 0.12);
+}
+
+.season-progress-bar span {
+  width: 70%;
+  height: 100%;
+  display: block;
+  border-radius: 999px;
+  background: var(--orange);
+}
+
+.season-badges {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.season-badges span {
+  padding: 9px 11px;
+  border: 1px solid var(--border-dark);
+  border-radius: 999px;
+  color: #e8d9cd;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+/* ---------------------------------
+   REWARDS TODAY
+---------------------------------- */
+
+.rewards-today-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+
+.rewards-today-grid article {
+  min-height: 285px;
+  padding: 27px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 29px;
+  background: var(--cream-light);
+}
+
+.rewards-today-grid article > span {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--peach);
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.rewards-today-grid h3 {
+  margin: auto 0 12px;
+  font-size: 25px;
+  letter-spacing: -0.035em;
+}
+
+.rewards-today-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.rewards-disclaimer {
+  margin-top: 22px;
+  padding: 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--peach);
+}
+
+.rewards-disclaimer strong {
+  color: var(--orange);
+}
+
+.rewards-disclaimer p {
+  margin: 0;
+  color: var(--brown);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ---------------------------------
+   REWARDS PHILOSOPHY
+---------------------------------- */
+
+.rewards-philosophy-section {
+  padding: 135px 28px;
+  background: var(--black);
+  color: var(--cream);
+  text-align: center;
+}
+
+.rewards-philosophy-inner {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.rewards-philosophy-inner h2 {
+  margin: 0;
+  font-size: clamp(50px, 7vw, 92px);
+  line-height: 0.94;
+  letter-spacing: -0.065em;
+}
+
+.rewards-philosophy-inner > p:last-child {
+  max-width: 720px;
+  margin: 30px auto 0;
+  color: #d8c8b8;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* ---------------------------------
+   REWARDS ECOSYSTEM
+---------------------------------- */
+
+.rewards-cycle {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  gap: 10px;
+}
+
+.rewards-cycle article {
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--cream-light);
+}
+
+.rewards-cycle article > span {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--peach);
+  color: var(--orange);
+  font-size: 10px;
+  font-weight: 950;
+}
+
+.rewards-cycle article strong {
+  font-size: 20px;
+}
+
+.rewards-cycle > div {
+  color: var(--orange);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 950;
+}
+
+.rewards-cycle-highlight {
+  border-color: var(--orange) !important;
+  background: var(--orange) !important;
+  color: var(--white);
+}
+
+.rewards-cycle-highlight > span {
+  background: var(--white) !important;
+  color: var(--orange) !important;
+}
+
+/* ---------------------------------
+   REWARDS FINAL CTA
+---------------------------------- */
+
+.rewards-final-cta {
+  padding: 115px 28px;
+  background: var(--orange);
+  color: var(--white);
+}
+
+.rewards-final-cta-inner {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: end;
+  gap: 80px;
+}
+
+.rewards-final-cta h2 {
+  margin: 0;
+  font-size: clamp(46px, 6vw, 76px);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+}
+
+.rewards-final-cta p:not(.eyebrow) {
+  margin: 23px 0 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ---------------------------------
+   REWARDS TABLET
+---------------------------------- */
+
+@media (max-width: 1080px) {
+  .rewards-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(350px, 0.85fr);
+    gap: 45px;
+  }
+
+  .rewards-flow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rewards-flow-arrow {
+    display: none;
+  }
+
+  .rewards-earn-grid,
+  .rewards-today-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------------------------------
+   REWARDS MOBILE / TABLET
+---------------------------------- */
+
+@media (max-width: 880px) {
+  .rewards-hero,
+  .rewards-seasons-inner,
+  .rewards-final-cta-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .rewards-hero {
+    min-height: auto;
+    padding-top: 75px;
+  }
+
+  .rewards-hero h1 {
+    font-size: clamp(58px, 15vw, 94px);
+  }
+
+  .rewards-status-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rewards-status-strip div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .rewards-status-strip div:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .rewards-story-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rewards-seasons-inner {
+    gap: 55px;
+  }
+
+  .rewards-final-cta-inner {
+    gap: 42px;
+  }
+}
+
+/* ---------------------------------
+   REWARDS PHONE
+---------------------------------- */
+
+@media (max-width: 590px) {
+  .rewards-hero {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .rewards-hero h1 {
+    font-size: clamp(52px, 16vw, 76px);
+  }
+
+  .rewards-hero-actions {
+    flex-direction: column;
+  }
+
+  .rewards-hero-actions .button {
+    width: 100%;
+  }
+
+  .rewards-profile-card {
+    padding: 23px;
+    border-radius: 33px;
+  }
+
+  .rewards-profile-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .verified-host {
+    align-self: flex-start;
+  }
+
+  .rewards-profile-stats,
+  .rewards-flow,
+  .rewards-earn-grid,
+  .rewards-story-grid,
+  .rewards-today-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rewards-status-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .rewards-status-strip div {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .rewards-status-strip div:last-child {
+    border-bottom: 0;
+  }
+
+  .rewards-flow article {
+    min-height: 240px;
+  }
+
+  .rewards-earn-section,
+  .rewards-seasons-section,
+  .rewards-philosophy-section,
+  .rewards-final-cta {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .rewards-story-card {
+    padding: 22px;
+    border-radius: 29px;
+  }
+
+  .rewards-story-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .rewards-disclaimer {
+    flex-direction: column;
+  }
+
+  .rewards-final-cta h2 {
+    font-size: clamp(42px, 13vw, 63px);
+  }
+}
